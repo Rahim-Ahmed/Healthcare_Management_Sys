@@ -167,7 +167,7 @@ section{
     padding-right: 0px;
 }
 .half2 img{
-    width: 895px;
+    width: 955px;
     height: 504px;
     opacity: 0.89;
 
@@ -239,39 +239,9 @@ section{
 
 }
 
-.fisrttxt h1{
-    position: relative;
-    font-size: 39px;
-    top:-40px;
-
-
-}
-.fisrttxt p{
-    position: relative;
-    top:-50px;
-    width: 78%;
-    color: rgba(0, 0, 0, 0.747);
-    margin: 0px auto;
-}
 
 /*serviceee*/
-.service{
-    position: relative;
-    top: -100px;
-    width: 80%;
-    margin: 0 auto;
-   
-}
-.service i{
-    font-size: 50px;
-    color: rgba(0, 0, 0, 0.829);
-}
-.service h1 {
-    color: rgba(0, 0, 0, 0.729);
-}
-.service p {
-    color: rgba(0, 0, 0, 0.629);
-}
+
 .serhover:hover{
     box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
     cursor: pointer;
@@ -295,9 +265,12 @@ section{
     margin: 0 auto;
     
 }
-.ser2{
-    padding-top: 35px;
-    margin-bottom: 100px;
-}
 
-/* section 2 end*/
+/* section end*/
+
+#blog:hover{
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.4);
+    cursor: pointer;
+ 
+    
+}
