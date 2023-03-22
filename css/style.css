@@ -124,7 +124,7 @@ header .nav ul li:hover{
  
 
 .iconarea a:hover .fa-facebook-f{
-	color: #3b5998;
+	color: #3b5998 ;
     font-size: 20px;
 }
 .iconarea a:hover .fa-twitter{
@@ -273,4 +273,17 @@ section{
     cursor: pointer;
  
     
+}
+
+/* carousel start*/
+#carouselExampleIndicators{
+    height: 500px !important;
+}
+#slide_img{
+    height: 500px !important; 
+    width: 1111px !important; 
+    margin: auto;
+}
+.bgrnd{
+    background-color: #f6f6ff !important;
 }
