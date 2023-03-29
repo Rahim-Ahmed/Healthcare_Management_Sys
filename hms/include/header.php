@@ -12,7 +12,7 @@
 							<i class="ti-align-justify"></i>
 						</a>
 						<a class="navbar-brand" href="#">
-							<h2 style="padding-top:5% "><a href="#"><h3><img src="assets/images/East West.png" style="height: 35px;"> <span style="font-weight: bold;"> <span style="color:#00D9A5 ;" >EW</span>HC</span></h3></a></h2>
+							<div style="padding-top:5% "><a href="#"><h3><img src="assets/images/East West.png" style="height: 35px;"> <span style="font-weight: bold;"> <span style="color:#00D9A5 ;" >EW</span>HC</span></h3></a></div>
 						</a>
 						<a href="#" class="sidebar-toggler pull-right visible-md visible-lg" data-toggle-class="app-sidebar-closed" data-toggle-target="#app">
 							<i class="ti-align-justify"></i>
@@ -34,7 +34,18 @@
 						
 							<li class="dropdown current-user">
 								<a href class="dropdown-toggle" data-toggle="dropdown">
-									<img src="assets/images/image2.jpg"> <span class="username">
+									<?php 
+									$query=mysqli_query($con,"select pic from users where id='".$_SESSION['id']."'");
+									$row=mysqli_fetch_array($query);
+									if($row['pic']==''){?>
+										<img src="assets/images/image2.jpg" alt="null">  
+									<?php } 
+									   else{ ?>
+										<img src=" <?php echo $row['pic']; ?> " style=" border-radius: 50%;" > 
+								<?php } ?>
+								 
+									
+									<span class="username">
 
 
 

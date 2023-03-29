@@ -21,6 +21,18 @@
 								</a>
 							</li>
 							<li>
+								<a href="doc-list.php">
+									<div class="item-content">
+										<div class="item-media">
+											<i class="ti-list"></i>
+										</div>
+										<div class="item-inner">
+											<span class="title"> Doctor list </span>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li>
 								<a href="book-appointment.php">
 									<div class="item-content">
 										<div class="item-media">
@@ -37,7 +49,7 @@
 								<a href="appointment-history.php">
 									<div class="item-content">
 										<div class="item-media">
-											<i class="ti-list"></i>
+											<i class="ti-calendar"></i>
 										</div>
 										<div class="item-inner">
 											<span class="title"> Appointment History </span>
@@ -49,7 +61,7 @@
 								<a href="manage-medhistory.php">
 									<div class="item-content">
 										<div class="item-media">
-											<i class="ti-list"></i>
+											<i class="ti-notepad"></i>
 										</div>
 										<div class="item-inner">
 											<span class="title"> Medical History </span>
@@ -61,7 +73,7 @@
 								<a href="change-password.php">
 									<div class="item-content">
 										<div class="item-media">
-											<i class="ti-list"></i>
+											<i class="ti-save-alt"></i>
 										</div>
 										<div class="item-inner">
 											<span class="title"> Change Password </span>

@@ -1,9 +1,10 @@
 <?php
 session_start();
-//error_reporting(0);
+error_reporting(0);
 include('include/config.php');
 include('include/checklogin.php');
 check_login();
+$did=intval($_GET['id']);// get doctor id
 
 if(isset($_POST['upload']))
 {
@@ -14,12 +15,12 @@ if(isset($_POST['upload']))
 	$fileerror=$file['error'];
 
 	if($fileerror==0){
-		$destfile='upload/'.$filename;
+		$destfile='../doctor/upload/'.$filename;
 		move_uploaded_file($filepath,$destfile);
 		//$insertquery= "INSERT INTO ";
 	}
-	
-	$sql=mysqli_query($con,"Update users set pic='$destfile' where id='".$_SESSION['id']."'");
+	$dest='upload/'.$filename;
+	$sql=mysqli_query($con,"Update doctors set pic='$dest' where id='$did'");
 if($sql)
 {
 echo "<script>alert('Picture updated Successfully');</script>";
@@ -31,25 +32,25 @@ echo "<script>alert('Picture updated Successfully');</script>";
 
 if(isset($_POST['submit']))
 {
-	$fname=$_POST['fname'];
-$address=$_POST['address'];
-$city=$_POST['city'];
-$gender=$_POST['gender'];
-
-$sql=mysqli_query($con,"Update users set fullName='$fname',address='$address',city='$city',gender='$gender' where id='".$_SESSION['id']."'");
+	$docspecialization=$_POST['Doctorspecialization'];
+$docname=$_POST['docname'];
+$docaddress=$_POST['clinicaddress'];
+$docfees=$_POST['docfees'];
+$doccontactno=$_POST['doccontact'];
+$docvtime=$_POST['vtime'];
+$docemail=$_POST['docemail'];
+$sql=mysqli_query($con,"Update doctors set specilization='$docspecialization',doctorName='$docname',address='$docaddress',docFees='$docfees',contactno='$doccontactno',vtime='$docvtime',docEmail='$docemail' where id='$did'");
 if($sql)
 {
-$msg="Your Profile updated Successfully";
-
+$msg="Doctor Details updated Successfully";
 
 }
-
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>User | Edit Profile</title>
+		<title>User | Doctor Details</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -74,7 +75,8 @@ $msg="Your Profile updated Successfully";
 			<div class="app-content">
 				
 						<?php include('include/header.php');?>
-						
+						<!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
+					
 				<!-- end: TOP NAVBAR -->
 				<div class="main-content" >
 					<div class="wrap-content container" id="container">
@@ -82,14 +84,14 @@ $msg="Your Profile updated Successfully";
 						<section id="page-title">
 							<div class="row">
 								<div class="col-sm-8">
-									<h1 class="mainTitle">User | Edit Profile</h1>
+									<h1 class="mainTitle">User | Doctor Details</h1>
 																	</div>
 								<ol class="breadcrumb">
 									<li>
-										<span>User </span>
+										<span>User</span>
 									</li>
 									<li class="active">
-										<span>Edit Profile</span>
+										<span>Doctor Details</span>
 									</li>
 								</ol>
 							</div>
@@ -99,99 +101,86 @@ $msg="Your Profile updated Successfully";
 						<div class="container-fluid container-fullw bg-white">
 							<div class="row">
 								<div class="col-md-12">
-<h5 style="color: green; font-size:18px; ">
+									<h5 style="color: green; font-size:18px; ">
 <?php if($msg) { echo htmlentities($msg);}?> </h5>
 									<div class="row margin-top-30">
 										<div class="col-lg-8 col-md-12">
 											<div class="panel panel-white">
 												<div class="panel-heading">
-													<h5 class="panel-title">Edit Profile</h5>
+													<h5 class="panel-title"> Doctor info</h5>
 												</div>
 												<div class="panel-body">
-									<?php 
-$sql=mysqli_query($con,"select * from users where id='".$_SESSION['id']."'");
+									<?php $sql=mysqli_query($con,"select * from doctors where id='$did'");
 while($data=mysqli_fetch_array($sql))
 {
 ?>
-<h4><?php echo htmlentities($data['fullName']);?>'s Profile</h4>
-<p><b>Profile Reg. Date: </b><?php echo htmlentities($data['regDate']);?></p>
+<h4><?php echo htmlentities($data['doctorName']);?>'s Profile</h4>
+<p><b>Profile Reg. Date: </b><?php echo htmlentities($data['creationDate']);?></p>
 <?php if($data['updationDate']){?>
 <p><b>Profile Last Updation Date: </b><?php echo htmlentities($data['updationDate']);?></p>
 <?php } ?>
-<div class="left "><img id="doc_img" style="max-width: 500px;max-height: 500px;" src="<?php echo htmlentities($data['pic']);?>" alt="null" ></div>
-<hr />													<form role="form" name="edit" method="post">
-													
+<div class="left "><img id="doc_img" style="max-width: 500px;max-height: 500px;" src="<?php echo 'doctor/'.htmlentities($data['pic']);?>" alt="null" ></div>
+<hr />
+													<form role="form" name="adddoc" method="post" onSubmit="return valid();">
+														<div class="form-group">
+															<label for="DoctorSpecialization">
+																Doctor Specialization
+															</label>
+ <input type="text" name="docname" class="form-control" readonly="readonly" value="<?php echo htmlentities($data['specilization']);?>" >
+																
+															</select>
+														</div>
 
 <div class="form-group">
-															<label for="fname">
-																 User Name
+															<label for="doctorname">
+																 Doctor Name
 															</label>
-	<input type="text" name="fname" class="form-control" value="<?php echo htmlentities($data['fullName']);?>" >
+	<input type="text" name="docname" class="form-control" readonly="readonly" value="<?php echo htmlentities($data['doctorName']);?>" >
 														</div>
 
 
 <div class="form-group">
 															<label for="address">
-																 Address
+																 Doctor Clinic Address
 															</label>
-					<textarea name="address" class="form-control"><?php echo htmlentities($data['address']);?></textarea>
+					<textarea name="clinicaddress" readonly="readonly" class="form-control"><?php echo htmlentities($data['address']);?></textarea>
 														</div>
 <div class="form-group">
-															<label for="city">
-																 City
+															<label for="fess">
+																 Doctor Consultancy Fees
 															</label>
-		<input type="text" name="city" class="form-control" required="required"  value="<?php echo htmlentities($data['city']);?>" >
+		<input type="text" name="docfees" class="form-control" required="required" readonly="readonly"  value="<?php echo htmlentities($data['docFees']);?>" >
 														</div>
 	
 <div class="form-group">
-									<label for="gender">
-																Gender
+									<label for="fess">
+																 Doctor Contact no
 															</label>
-
-<select name="gender" class="form-control" required="required" >
-<option value="<?php echo htmlentities($data['gender']);?>"><?php echo htmlentities($data['gender']);?></option>
-<option value="male">Male</option>	
-<option value="female">Female</option>	
-<option value="other">Other</option>	
-</select>
-
+					<input type="text" name="doccontact" class="form-control" readonly="readonly" required="required"  value="<?php echo htmlentities($data['contactno']);?>">
 														</div>
-
 <div class="form-group">
 									<label for="fess">
-																 User Email
+																 Doctor's visiting time
 															</label>
-					<input type="email" name="uemail" class="form-control"  readonly="readonly"  value="<?php echo htmlentities($data['email']);?>">
-					<a href="change-emaild.php">Update your email id</a>
+					<input type="text" name="vtime" class="form-control" readonly="readonly" required="required"  value="<?php echo htmlentities($data['vtime']);?>">
 														</div>
-
-
-
-														
-														
-														
-														
-														<button type="submit" name="submit" class="btn btn-o btn-primary">
-															Update
-														</button>
-													</form>
-
-<form role="form" name="adddoc" method="post" enctype="multipart/form-data">
-					<div class="form-group">
+<div class="form-group">
 									<label for="fess">
-																 <br> User's Photo
+																 Doctor Email
 															</label>
-					<input type="file" name="photo" class="form-control form-control ChangeEvntImage UploadEventImage tab5-required-check"  value="<?=$data['pic']?>" id="image" >
-				
+					<input type="email" name="docemail" class="form-control"  readonly="readonly"  value="<?php echo htmlentities($data['docEmail']);?>">
 														</div>
-											<button type="submit" name="upload" class="btn btn-o btn-primary">
-															upload
-														</button>
+
+
+
+														
+														<?php } ?>
+														
+													
 													</form>
 
 
-
-													<?php } ?>
+										
 												</div>
 											</div>
 										</div>
@@ -206,7 +195,8 @@ while($data=mysqli_fetch_array($sql))
 										</div>
 									</div>
 								</div>
-						
+							</div>
+						</div>
 						<!-- end: BASIC EXAMPLE -->
 			
 					
@@ -225,7 +215,7 @@ while($data=mysqli_fetch_array($sql))
 		
 			<!-- start: SETTINGS -->
 	<?php include('include/setting.php');?>
-			
+			<>
 			<!-- end: SETTINGS -->
 		</div>
 		<!-- start: MAIN JAVASCRIPTS -->
