@@ -4,7 +4,7 @@
 
     <div class="border p-4 border-dark rounded bg-dark">
 					<div class="mb-3" style=" justify-content: center; display:flex; ">
-						  <img src="images/user.png" style="width: 200px; height:200px">
+						  <img src="images/user2.gif" style="width: 200px; height:200px">
 					</div>
 					<div class="text list_1_of_2">
 						  <h3 class="text-white">User</h3>
@@ -27,7 +27,7 @@
 
 	<div class="border p-4 border-dark rounded bg-dark">
 					<div class="mb-3" style=" justify-content: center; display:flex; ">
-                    <img src="images/adm.png" style="width: 200px; height:200px">
+                    <img src="images/fun.gif" style="width: 200px; height:200px">
 					</div>
 					<div class="text list_1_of_2">
 						  <h3 class="text-white" >Admin Login</h3>
