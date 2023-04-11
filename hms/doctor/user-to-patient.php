@@ -69,7 +69,7 @@ window.location.replace('appointment-history.php');
 <section id="page-title">
 <div class="row">
 <div class="col-sm-8">
-<h1 class="mainTitle"><a href="temp.php?id=<?php echo $uid;?>">Patient | Add Patient</a></h1>
+<h1 class="mainTitle">Patient | Add Patient</h1>
 </div>
 <ol class="breadcrumb">
 <li>

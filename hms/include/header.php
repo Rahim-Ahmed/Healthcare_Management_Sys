@@ -11,8 +11,8 @@
 						<a href="#" class="sidebar-mobile-toggler pull-left hidden-md hidden-lg" class="btn btn-navbar sidebar-toggle" data-toggle-class="app-slide-off" data-toggle-target="#app" data-toggle-click-outside="#sidebar">
 							<i class="ti-align-justify"></i>
 						</a>
-						<a class="navbar-brand" href="#">
-							<div style="padding-top:5% "><a href="#"><h3><img src="assets/images/East West.png" style="height: 35px;"> <span style="font-weight: bold;"> <span style="color:#00D9A5 ;" >EW</span>HC</span></h3></a></div>
+						<a class="navbar-brand" href="../index.html">
+							<div style="padding-top:5% "><a href="../index.html"><h3><img src="assets/images/East West.png" style="height: 35px;"> <span style="font-weight: bold;"> <span style="color:#00D9A5 ;" >EW</span>HC</span></h3></a></div>
 						</a>
 						<a href="#" class="sidebar-toggler pull-right visible-md visible-lg" data-toggle-class="app-sidebar-closed" data-toggle-target="#app">
 							<i class="ti-align-justify"></i>
@@ -28,7 +28,7 @@
 						<ul class="nav navbar-right">
 							<!-- start: MESSAGES DROPDOWN -->
 								<li  style="padding-top:2% ">
-								<a href="#"><h3><img src="assets/images/East West.png" style="height: 35px;"> <span style="font-weight: bold;"> <span style="color:#00D9A5 ;" >EW</span>-Health Care</span></h3></a>
+								<a href="../index.html"><h3><img src="assets/images/East West.png" style="height: 35px;"> <span style="font-weight: bold;"> <span style="color:#00D9A5 ;" >EW</span>-Health Care</span></h3></a>
 							</li>
 						
 						
@@ -41,7 +41,7 @@
 										<img src="assets/images/image2.jpg" alt="null">  
 									<?php } 
 									   else{ ?>
-										<img src=" <?php echo $row['pic']; ?> " style=" border-radius: 50%;" > 
+										<img src=" <?php echo $row['pic']; ?> " style=" border-radius: 50%;max-width:33px" > 
 								<?php } ?>
 								 
 									

@@ -49,12 +49,16 @@
 									
 									<li>
 										<a href="add-patient.php">
-											<span class="title"> Add Patient</span>
+											
+										<i class="ti-plus" style="color:#007AFF;"></i><span class="title"> Add Patient</span>
+											
 										</a>
 									</li>
 									<li>
 										<a href="manage-patient.php">
-											<span class="title"> Manage Patient </span>
+										<i class="ti-panel" style="color:#007AFF;"></i>
+										<span class="title"> Manage Patient </span>
+											
 										</a>
 									</li>
 									

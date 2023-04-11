@@ -129,7 +129,7 @@ if(($row['userStatus']==1) && ($row['doctorStatus']==0))
 
 	<?php if(($row['userStatus']==1) && ($row['doctorStatus']==1))  
 { ?>
-	<a href="user-to-patient.php?id=<?php echo $row['userId'];?>" class="btn btn-transparent btn-xs" tooltip-placement="top" tooltip="Edit"><i class="fa fa-pencil"></i></a>
+	<a href="user-to-patient.php?id=<?php echo $row['userId'];?>" class="btn btn-transparent btn-xs" tooltip-placement="top" tooltip="Edit"><i class="ti-plus" style="font-size: 18px;"></i></a>
 	<span>||</span>										
 	<a href="appointment-history.php?id=<?php echo $row['id']?>&cancel=update" onClick="return confirm('Are you sure you want to cancel this appointment ?')"class="btn btn-transparent btn-xs tooltips" title="Cancel Appointment" tooltip-placement="top" tooltip="Remove">Cancel</a>
 	<span>||</span>		
