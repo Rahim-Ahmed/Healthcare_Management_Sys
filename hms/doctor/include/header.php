@@ -42,7 +42,7 @@
 										<img src="assets/images/image2.jpg" alt="null">  
 									<?php } 
 									   else{ ?>
-										<img src=" <?php echo $row['pic']; ?> " style=" border-radius: 50%; max-width:33px" > 
+										<img src=" <?php echo $row['pic']; ?> " style=" border-radius: 50%; width:30px;height:38px"  > 
 								<?php } ?>
 								 
 									
@@ -57,6 +57,8 @@ while($row=mysqli_fetch_array($query))
 }
 									?> <i class="ti-angle-down"></i></i></span>
 								</a>
+
+
 								<ul class="dropdown-menu dropdown-dark">
 									<li>
 										<a href="edit-profile.php">

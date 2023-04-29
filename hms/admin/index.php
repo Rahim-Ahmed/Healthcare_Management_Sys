@@ -54,7 +54,7 @@ exit();
 		<div class="row">
 			<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
 				<div class="logo margin-top-30">
-				<h2>Admin Login</h2>
+				<a href="../../index.html"><h2><img src="../../icon/East West.png" alt="Medical carae" style="height: 50px;"> <span style="font-weight: bold;"> <span style="color:#00D9A5 ;" >EW</span>-Health Care</span> | Admin Login</h2></a>
 				</div>
 
 				<div class="box-login">
