@@ -36,7 +36,7 @@
 								<a href="javascript:void(0)">
 									<div class="item-content">
 										<div class="item-media">
-											<i class="ti-user"></i>
+											<i class="ti-id-badge"></i>
 										</div>
 										<div class="item-inner">
 											<span class="title"> Doctors </span><i class="icon-arrow"></i>
@@ -46,17 +46,20 @@
 								<ul class="sub-menu">
 									<li>
 										<a href="doctor-specilization.php">
-											<span class="title"> Doctor Specialization </span>
+										<i class="ti-view-list"></i>	
+										<span class="title"> Doctor Specialization </span>
 										</a>
 									</li>
 									<li>
 										<a href="add-doctor.php">
-											<span class="title"> Add Doctor</span>
+										<i class="ti-plus"></i>	
+										<span class="title"> Add Doctor</span>
 										</a>
 									</li>
 									<li>
 										<a href="Manage-doctors.php">
-											<span class="title"> Manage Doctors </span>
+										<i class="ti-panel"></i>	
+										<span class="title"> Manage Doctors </span>
 										</a>
 									</li>
 									
@@ -67,7 +70,7 @@
 								<a href="javascript:void(0)">
 									<div class="item-content">
 										<div class="item-media">
-											<i class="ti-user"></i>
+											<i class="ti-id-badge"></i>
 										</div>
 										<div class="item-inner">
 											<span class="title"> Users </span><i class="icon-arrow"></i>
@@ -78,6 +81,7 @@
 									
 									<li>
 										<a href="manage-users.php">
+										<i class="ti-panel"></i>
 											<span class="title"> Manage Users </span>
 										</a>
 									</li>
@@ -88,7 +92,7 @@
 								<a href="javascript:void(0)">
 									<div class="item-content">
 										<div class="item-media">
-											<i class="ti-user"></i>
+											<i class="ti-id-badge"></i>
 										</div>
 										<div class="item-inner">
 											<span class="title"> Patients </span><i class="icon-arrow"></i>
@@ -99,7 +103,8 @@
 									
 									<li>
 										<a href="manage-patient.php">
-											<span class="title"> Manage Patients </span>
+										<i class="ti-panel"></i>	
+										<span class="title"> Manage Patients </span>
 										</a>
 									</li>
 									
@@ -136,12 +141,14 @@
 									
 									<li>
 										<a href="unread-queries.php">
+											<i class="ti-comment-alt"></i>
 											<span class="title"> Unread Query </span>
 										</a>
 									</li>
 
 									<li>
 										<a href="read-query.php">
+											<i class="ti-comment"></i>
 											<span class="title"> Read Query </span>
 										</a>
 									</li>
@@ -155,7 +162,7 @@
 								<a href="doctor-logs.php">
 									<div class="item-content">
 										<div class="item-media">
-											<i class="ti-list"></i>
+											<i class="ti-view-list"></i>
 										</div>
 										<div class="item-inner">
 											<span class="title"> Doctor Session Logs </span>
@@ -170,7 +177,7 @@
 								<a href="user-logs.php">
 									<div class="item-content">
 										<div class="item-media">
-											<i class="ti-list"></i>
+											<i class="ti-layout-grid2"></i>
 										</div>
 										<div class="item-inner">
 											<span class="title"> User Session Logs </span>
@@ -182,7 +189,7 @@
 								<a href="javascript:void(0)">
 									<div class="item-content">
 										<div class="item-media">
-											<i class="ti-files"></i>
+											<i class="ti-agenda"></i>
 										</div>
 										<div class="item-inner">
 											<span class="title"> Reports </span><i class="icon-arrow"></i>
@@ -193,7 +200,8 @@
 									
 									<li>
 										<a href="between-dates-reports.php">
-											<span class="title">B/w dates reports </span>
+										<i class="ti-agenda"></i>	
+										<span class="title">B/w dates reports </span>
 										</a>
 									</li>
 
