@@ -29,11 +29,11 @@ section{
     margin-bottom: 120px;
 }
 .half2{
-    padding-right: 200px;
+    padding-right: 0px;
 }
 .half2 img{
-    width: 800px;
-    height: 494px;
+    width: 955px;
+    height: 504px;
     opacity: 0.89;
 
 }
@@ -50,41 +50,42 @@ section{
     font-size: 45px;
     color: #3f027c;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background: linear-gradient(to right, #f5af93e0 30%, #ffccccd3 93%);
+    background: linear-gradient(45deg,#b36ef7c4,rgba(240, 199, 206, 0.801));
 }
 .half1 h1{
     position: relative;
-    top:-100px;
+    top:-40px;
     font-size: 37px;
     width: 1000px;
     text-transform: uppercase;
 }
 .half1 p{
     position: relative;
-    top:-100px;
+    top:-56px;
     color: rgba(83, 83, 83, 0.945);
     letter-spacing: .5px;
     width: 600px;
 }
 .half1 input{
     position: relative;
-    top:-80px;
-    left: -3px;
+    top:-50px;
+    left: 450px;
     padding:12px 25px;
     outline: none;
-    color: rgba(5, 5, 5, 0.801);
-    border: 1px solid #e5bba2;
+    color: white;
+    border: 1px solid #769df1d8;
     font-size: 15px;
     font-weight: bold;
     border-radius: 20% 20% 20% 20% / 90% 90% 90% 90%;
-    background: #F67C56;
+    background: linear-gradient(120deg,#84a8f5 20%,#b085ec);
 }
 .half1 input:hover{
     padding:13px 26px;
     cursor: pointer;
     border: 1px solid #d3c7e4;
     outline: none;
-    background: #ada9a9c5;
+  
+    background: linear-gradient(90deg,#5989f0 20%,#a474e7);
 }
 /* section 1 end*/
 
@@ -148,7 +149,7 @@ section{
     margin: auto;
 }
 .bgrnd{
-    background-color: #ffffff !important;
+    background-color: #f6f6ff !important;
 }
 .bgrnd2{
     background-color: #e4e4eea4 !important;
